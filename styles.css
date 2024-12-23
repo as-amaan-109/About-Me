@@ -1,0 +1,168 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* About Section */
+.about {
+    min-height: 100vh;
+    width: 100%;
+    padding: 78px 20px;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Image Container */
+.img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 400px; /* Restrict image container width */
+    width: 100%;
+}
+
+.img-container img {
+    border: 2px solid #f30a0a;
+    box-shadow: 0 0 5px #f30a0a, 0 0 25px #f30a0a;
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Retain circular shape */
+    max-width: 300px; /* Prevent excessive scaling */
+    transition: 0.5s ease;
+}
+
+.img-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Text Content */
+.about-text {
+    flex: 2;
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.about-text h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #f30a0a;
+}
+
+.about-text p {
+    color: rgba(225, 236, 236, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: transparent;
+    color: #f30a0a;
+    font-size: 1rem;
+    border: 2px solid #f30a0a;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f30a0a;
+    color: white;
+    box-shadow: 0 0 5px #f30a0a, 0 0 25px #f30a0a;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text h5 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-container img {
+        max-width: 250px;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-container img {
+        max-width: 200px;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-text h5 {
+        font-size: 1.2rem;
+    }
+
+    .about-text p {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
